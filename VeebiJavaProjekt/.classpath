@@ -3,6 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/ivy-2.2.0.jar"/>
 	<classpathentry kind="lib" path="lib/build/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/sources/jstl-1.2.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>

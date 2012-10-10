@@ -4,10 +4,21 @@
 	<info
 		organisation="itcollege"
 		module="i377-praks1"
-		revision="working@Tanel-sylePC"
+		revision="working@Nabonidus"
 		conf="source"
 		confs="build, runtime, source"
-		date="20121008191919"/>
+		date="20121010202115"/>
 	<dependencies>
+		<module organisation="jstl" name="jstl">
+			<revision name="1.2" status="release" pubdate="20060512053800" resolver="public" artresolver="main" homepage="" downloaded="true" searched="true" default="false" conf="system, default, optional, compile, provided, runtime, javadoc, sources, master" position="0">
+				<metadata-artifact status="successful" details="" size="141" time="320" location="C:\Users\Lauri\workspace\veebi-java-projekt\VeebiJavaProjekt\ivy\jstl\jstl\ivy-1.2.xml" searched="true" original-local-location="C:\Users\Lauri\workspace\veebi-java-projekt\VeebiJavaProjekt\ivy\jstl\jstl\ivy-1.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.pom"/>
+				<caller organisation="itcollege" name="i377-praks1" conf="source" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="working@Nabonidus"/>
+				<artifacts>
+					<artifact name="jstl" type="jar" ext="jar" status="successful" details="" size="414240" time="1260" location="C:\Users\Lauri\workspace\veebi-java-projekt\VeebiJavaProjekt\ivy\jstl\jstl\jars\jstl-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
 	</dependencies>
 </ivy-report>
