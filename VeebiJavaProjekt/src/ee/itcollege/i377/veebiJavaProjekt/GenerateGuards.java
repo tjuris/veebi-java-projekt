@@ -32,6 +32,7 @@ public class GenerateGuards extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if (!request.getParameterMap().containsKey("count")) return;
 		count = Integer.parseInt(request.getParameter("count"));
 		PrintWriter out = response.getWriter();
 		out.write("<html><head><title>Loo uued valvurid</title></head><body><form method='post' action='generateGuards'>");
@@ -47,26 +48,24 @@ public class GenerateGuards extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
 			Class.forName("org.hsqldb.jdbcDriver");
-			Connection conn = DriverManager.getConnection("jdbc:hsqldb:GuardDB", "sa", "");
+			Connection conn = DriverManager.getConnection("jdbc:hsqldb:MyDB");
 			PrintWriter out = response.getWriter();
 			Statement statement = conn.createStatement();
 			
 			StringBuilder sb = new StringBuilder();
 			
 			for (int i=0; i<count; i++){
-				sb.append("insert into guard values ('");
-				sb.append(i);
-				sb.append("', '");
+				sb.append("insert into guard values (");
+				sb.append("null");
+				sb.append(",'");
 				sb.append(request.getParameter("name"+i));
-				out.write(request.getParameter("name"+i));
+				out.write(request.getParameter("name"+i)+"\n");
 				sb.append("', ");
 				sb.append(request.getParameter("age"+i));
 				sb.append(")");
 			}
 			statement.execute(sb.toString());
-			
-
-			//statement.execute("insert into guard values ("1", 'Pille', 30");
+			conn.close();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
