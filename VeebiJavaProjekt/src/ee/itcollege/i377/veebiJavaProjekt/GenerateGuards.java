@@ -32,6 +32,7 @@ public class GenerateGuards extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		if (!request.getParameterMap().containsKey("count")) return;
 		count = Integer.parseInt(request.getParameter("count"));
 		PrintWriter out = response.getWriter();
 		out.write("<html><head><title>Loo uued valvurid</title></head><body><form method='post' action='generateGuards'>");
