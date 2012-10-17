@@ -64,9 +64,7 @@ public class GenerateGuards extends HttpServlet {
 				sb.append(")");
 			}
 			statement.execute(sb.toString());
-			
-
-			//statement.execute("insert into guard values ("1", 'Pille', 30");
+			conn.close();
 		}
 		catch (Exception e) {
 			e.printStackTrace();
