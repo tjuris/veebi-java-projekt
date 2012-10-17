@@ -4,8 +4,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
 
-	<info organisation="itcollege" module="i377-praks1">
-		<ivyauthor name="Priit Liivak" url="mailto:priit.liivak@itcollege.ee" />
+	<info organisation="itcollege" module="projekt">
+		<ivyauthor name="Team 2" url="https://github.com/tjuris/veebi-java-projekt" />
 	</info>
 
 	<configurations>
@@ -19,6 +19,7 @@
 		<dependency org="javax.servlet" name="javax.servlet-api"
 			rev="3.0.1" conf="build->default" />
 		<dependency org="jstl" name="jstl" rev="1.2" />
+		<dependency org="org.hsqldb" name="hsqldb" rev="1.8.0.10"/>
 
 	</dependencies>
 </ivy-module>
