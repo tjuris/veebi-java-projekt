@@ -4,30 +4,30 @@
 	<info
 		organisation="itcollege"
 		module="projekt"
-		revision="working@Tanel-sylePC"
+		revision="working@reim2n-ThinkPad-X61"
 		conf="build"
 		confs="build, runtime, source"
-		date="20121017162315"/>
+		date="20121025002842"/>
 	<dependencies>
 		<module organisation="javax.servlet" name="javax.servlet-api">
 			<revision name="3.0.1" status="release" pubdate="20110712224053" resolver="public" artresolver="main" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="2">
 				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
-				<metadata-artifact status="no" details="" size="3918" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\javax.servlet\javax.servlet-api\ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="working@Tanel-sylePC"/>
+				<metadata-artifact status="no" details="" size="3918" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/javax.servlet-api/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="working@reim2n-ThinkPad-X61"/>
 				<artifacts>
-					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="85353" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\javax.servlet\javax.servlet-api\jars\javax.servlet-api-3.0.1.jar">
+					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="85353" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.hsqldb" name="hsqldb">
-			<revision name="1.8.0.10" status="release" pubdate="20090424215902" resolver="public" artresolver="main" homepage="http://hsqldb.org/" downloaded="true" searched="true" default="false" conf="system, default, optional, compile, *, provided, runtime, javadoc, sources, master" position="1">
+			<revision name="1.8.0.10" status="release" pubdate="20090424215902" resolver="public" artresolver="main" homepage="http://hsqldb.org/" downloaded="false" searched="false" default="false" conf="system, default, optional, compile, *, provided, runtime, javadoc, sources, master" position="1">
 				<license name="HSQLDB License, a BSD open source license" url="http://hsqldb.org/web/hsqlLicense.html"/>
-				<metadata-artifact status="successful" details="" size="1291" time="447" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\org.hsqldb\hsqldb\ivy-1.8.0.10.xml" searched="true" original-local-location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\org.hsqldb\hsqldb\ivy-1.8.0.10.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.8.0.10" rev-constraint-default="1.8.0.10" rev-constraint-dynamic="1.8.0.10" callerrev="working@Tanel-sylePC"/>
+				<metadata-artifact status="no" details="" size="2400" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hsqldb/hsqldb/ivy-1.8.0.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.8.0.10" rev-constraint-default="1.8.0.10" rev-constraint-dynamic="1.8.0.10" callerrev="working@reim2n-ThinkPad-X61"/>
 				<artifacts>
-					<artifact name="hsqldb" type="jar" ext="jar" status="successful" details="" size="706710" time="2068" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\org.hsqldb\hsqldb\jars\hsqldb-1.8.0.10.jar">
+					<artifact name="hsqldb" type="jar" ext="jar" status="no" details="" size="706710" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hsqldb/hsqldb/jars/hsqldb-1.8.0.10.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar"/>
 					</artifact>
 				</artifacts>
@@ -35,10 +35,10 @@
 		</module>
 		<module organisation="jstl" name="jstl">
 			<revision name="1.2" status="release" pubdate="20060512053800" resolver="public" artresolver="main" homepage="" downloaded="false" searched="false" default="false" conf="system, default, optional, compile, *, provided, runtime, javadoc, sources, master" position="0">
-				<metadata-artifact status="no" details="" size="2197" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\jstl\jstl\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="working@Tanel-sylePC"/>
+				<metadata-artifact status="no" details="" size="2197" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/jstl/jstl/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="working@reim2n-ThinkPad-X61"/>
 				<artifacts>
-					<artifact name="jstl" type="jar" ext="jar" status="no" details="" size="414240" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\VeebiJavaProjekt\ivy\jstl\jstl\jars\jstl-1.2.jar">
+					<artifact name="jstl" type="jar" ext="jar" status="no" details="" size="414240" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/jstl/jstl/jars/jstl-1.2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/jstl/jstl/1.2/jstl-1.2.jar"/>
 					</artifact>
 				</artifacts>
