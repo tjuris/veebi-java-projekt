@@ -7,3 +7,6 @@ Eclipse'i tÃµmbamine:
 	-seejÃ¤rel teha ant retrieve projekti build.xml failist
 	-projekti lib/build/ kaustast leida javax.servlet-api... fail ning paremklikiga Build Path -> add to build path 
 	-errorid peaksid kaduma ja asjad kenasti serveril kÃ¤ivituma
+	
+	
+	lihtsalt testiks lisatud rida, et teada saada kas nüüd lõpuks asi töötab
