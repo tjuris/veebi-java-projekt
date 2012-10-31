@@ -1,6 +1,6 @@
 <%@ include file="init.jsp" %>
 
-<our:ourTwitterTemplate>
+<our:Template>
 	<h1>Hello, twitter!</h1>
 	
 	<c:choose>
@@ -15,7 +15,7 @@
 			</form>
 		</c:otherwise>
 	</c:choose>
-</our:ourTwitterTemplate>
+</our:Template>
 
 
 

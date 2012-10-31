@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Bo</title>
+<title></title>
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -12,7 +12,7 @@
 		</div>
 	</div>
 
-	<br> Tweete kokku: ${tweetsCount}
+	<br> <!--Tweete kokku: ${tweetsCount}  -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
