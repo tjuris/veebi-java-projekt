@@ -24,7 +24,7 @@ public class IncidentSimulatorServiceImpl implements IncidentService {
 		Random rand = new Random();
 		int listSize = rand.nextInt(10);
 		List<Incident> result = new LinkedList<Incident>();
-		for (int i=0; i<listSize; i++){
+		for (int i=0; i<listSize+1; i++){
 			result.add(generateIncident(rand));
 		}
 		return result;
