@@ -6,7 +6,7 @@
 	<h1>Reported Incident</h1>
 	
 	${msg }
-	<table>
+	<table border="1">
 		<tr>
 			<th>Start Date</th>
 			<th>End Date</th>
@@ -15,32 +15,27 @@
 			<th>Nr. of involved guards</th>
 			<th>Status</th>
 		</tr>
+
 		<tr>
 			<td>
-				${incident.start }
+<!-- 			${incident.start } -->
 			</td>
-		</tr>
-		<tr>
 			<td>
-				${incident.end }
-			</td>
-		</tr>
-		<tr>
+<!-- 			${incident.end } -->
+ 			</td>
 			<td>
 				${incident.location }
 			</td>
-		</tr>
-		<tr>
 			<td>
 				${incident.description }
 			</td>
-		</tr>
-		<tr>
+	
 			<td>
-				${incident.involvedGuardCount }
+				<center>
+					${incident.involvedGuardCount }
+				</center>
 			</td>
-		</tr>
-		<tr>
+		
 			<td>
 				${incident.status }
 			</td>
