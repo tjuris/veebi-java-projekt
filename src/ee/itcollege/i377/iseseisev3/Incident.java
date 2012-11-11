@@ -2,8 +2,12 @@ package ee.itcollege.i377.iseseisev3;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 public class Incident {
+	@DateTimeFormat(pattern="dd.MM.yyyy")
 	private Date start;
+	@DateTimeFormat(pattern="dd.MM.yyyy")
 	private Date end;
 	private String location;
 	private String description;

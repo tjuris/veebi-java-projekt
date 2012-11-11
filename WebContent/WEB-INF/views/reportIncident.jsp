@@ -8,14 +8,14 @@
 	
 	<form:form commandName="incident" method="POST">
 		<table>
-<!-- 		<tr>
+		<tr>
 				<td>Start Date </td>
 				<td><form:input path="start"/> </td>
 			</tr>
 			<tr>
 				<td>End Date </td>
 				<td><form:input path="end"/> </td>
-			</tr> -->
+			</tr>
 			<tr>
 				<td>Location </td>
 				<td><form:input path="location"/> </td>

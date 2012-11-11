@@ -22,10 +22,10 @@
 
 		<tr>
 			<td>
-<!-- 			${incident.start } -->
+ 				${incident.start }
 			</td>
 			<td>
-<!-- 			${incident.end } -->
+ 				${incident.end }
  			</td>
 			<td>
 				${incident.location }
