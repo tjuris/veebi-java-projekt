@@ -1,7 +1,11 @@
 <%@ include file="init.jsp"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
-
+<head>
+	<style>
+		p {text-align: center;}
+	</style>
+</head>
 <our:Template>
 	<h1>Reported Incident</h1>
 	
@@ -31,9 +35,7 @@
 			</td>
 	
 			<td>
-				<center>
-					${incident.involvedGuardCount }
-				</center>
+				<p>${incident.involvedGuardCount } </p>
 			</td>
 		
 			<td>
