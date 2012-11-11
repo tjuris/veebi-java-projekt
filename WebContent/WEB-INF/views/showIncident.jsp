@@ -9,7 +9,6 @@
 <our:Template>
 	<h1>Reported Incident</h1>
 	
-	${msg }
 	<table border="1">
 		<tr>
 			<th>Start Date</th>
