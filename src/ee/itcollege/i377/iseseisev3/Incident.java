@@ -2,6 +2,10 @@ package ee.itcollege.i377.iseseisev3;
 
 import java.util.Date;
 
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.springframework.format.annotation.DateTimeFormat;
 
 public class Incident {
@@ -9,9 +13,17 @@ public class Incident {
 	private Date start;
 	@DateTimeFormat(pattern="dd.MM.yyyy")
 	private Date end;
+	@NotNull
+	@Size(min=2)
 	private String location;
+	@NotNull
+	@Size(min=2)
 	private String description;
+	@NotNull
+	@Min(value=1)
 	private Integer involvedGuardCount;
+	@NotNull
+	@Size(min=2)
 	private String Status;
 	public Date getStart() {
 		return start;

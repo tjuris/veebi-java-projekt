@@ -12,7 +12,8 @@
 		</div>
 	</div>
 
-	<br> <!--Tweete kokku: ${tweetsCount}  -->
+	<br>
+	<!--Tweete kokku: ${tweetsCount}  -->
 	<div class="navbar navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">

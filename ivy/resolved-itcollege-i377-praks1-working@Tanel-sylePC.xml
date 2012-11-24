@@ -1,19 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="http://ivy.webmedia.int/ivy-doc.xsl"?>
-<ivy-module version="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0"
+    xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd" >
 
-	<info organisation="itcollege" module="i377-praks1" revision="working@Tanel-sylePC" status="integration" publication="20121001101438">
-		<ivyauthor name="Priit Liivak" url="mailto:priit.liivak@itcollege.ee"/>
-	</info>
+    <info
+        module="i377-praks1"
+        organisation="itcollege"
+        publication="20121001101438"
+        revision="working@Tanel-sylePC"
+        status="integration" >
 
-	<configurations>
-		<conf name="build" extends="runtime,source" description="Modules needed only for building application from source"/>
-		<conf name="runtime" description="Modules needed for running application"/>
-		<conf name="source" description="Sources of used jars"/>
-	</configurations>
+        <ivyauthor
+            name="Priit Liivak"
+            url="mailto:priit.liivak@itcollege.ee" />
+    </info>
 
-	<dependencies>
-		<dependency org="javax.servlet" name="javax.servlet-api" rev="3.0.1" conf="build->default"/>
+    <configurations>
 
-	</dependencies>
+        <conf
+            name="build"
+            description="Modules needed only for building application from source"
+            extends="runtime,source" />
+
+        <conf
+            name="runtime"
+            description="Modules needed for running application" />
+
+        <conf
+            name="source"
+            description="Sources of used jars" />
+    </configurations>
+
+    <dependencies>
+
+        <dependency
+            name="javax.servlet-api"
+            conf="build->default"
+            org="javax.servlet"
+            rev="3.0.1" />
+    </dependencies>
+
 </ivy-module>

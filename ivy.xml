@@ -1,33 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="http://ivy.webmedia.int/ivy-doc.xsl"?>
-<ivy-module version="1.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+<ivy-module xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0"
+    xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd" >
 
-	<info organisation="itcollege" module="projekt">
-		<ivyauthor name="Team 2" url="https://github.com/tjuris/veebi-java-projekt" />
-	</info>
+    <info
+        module="projekt"
+        organisation="itcollege" >
 
-	<configurations>
-		<conf name="build" extends="runtime,source"
-			description="Modules needed only for building application from source" />
-		<conf name="runtime" description="Modules needed for running application" />
-		<conf name="source" description="Sources of used jars" />
-	</configurations>
-	
+        <ivyauthor
+            name="Team 2"
+            url="https://github.com/tjuris/veebi-java-projekt" />
+    </info>
 
-	<dependencies>
-	    <dependency org="javax.servlet" name="javax.servlet-api"
-   			rev="3.0.1" conf="build->default" />
-		<dependency org="org.hsqldb" name="hsqldb" rev="1.8.0.10"/>
-		<dependency org="org.springframework" name="org.springframework.web" rev="3.1.2.RELEASE" conf="source,runtime->default" />
-		<dependency org="org.springframework" name="org.springframework.web.servlet" rev="3.1.2.RELEASE" conf="source,runtime->default" />
-		<dependency org="commons-logging" name="commons-logging" rev="1.1.1" conf="runtime->default" />
+    <configurations>
 
-		<dependency org="cglib" name="cglib" rev="2.2.2" conf="runtime->default" /> 
-		<dependency org="org.codehaus.jackson" name="jackson-mapper-asl" rev="1.9.10" conf="runtime->default" />
+        <conf
+            name="build"
+            description="Modules needed only for building application from source"
+            extends="runtime,source" />
 
-		<dependency org="javax.servlet" name="jstl" rev="1.2" conf="runtime->default" />
-		<dependency org="org.joda" name="com.springsource.org.joda.time" rev="1.6.2" conf="runtime->default"/>
-	</dependencies>
+        <conf
+            name="runtime"
+            description="Modules needed for running application" />
+
+        <conf
+            name="source"
+            description="Sources of used jars" />
+    </configurations>
+
+    <dependencies>
+
+        <dependency
+            name="javax.servlet-api"
+            conf="build->default"
+            org="javax.servlet"
+            rev="3.0.1" />
+
+        <dependency
+            name="hsqldb"
+            org="org.hsqldb"
+            rev="1.8.0.10" />
+
+        <dependency
+            name="org.springframework.web"
+            conf="source,runtime->default"
+            org="org.springframework"
+            rev="3.1.2.RELEASE" />
+
+        <dependency
+            name="org.springframework.web.servlet"
+            conf="source,runtime->default"
+            org="org.springframework"
+            rev="3.1.2.RELEASE" />
+
+        <dependency
+            name="commons-logging"
+            conf="runtime->default"
+            org="commons-logging"
+            rev="1.1.1" />
+
+        <dependency
+            name="cglib"
+            conf="runtime->default"
+            org="cglib"
+            rev="2.2.2" />
+
+        <dependency
+            name="jackson-mapper-asl"
+            conf="runtime->default"
+            org="org.codehaus.jackson"
+            rev="1.9.10" />
+
+        <dependency
+            name="jstl"
+            conf="runtime->default"
+            org="javax.servlet"
+            rev="1.2" />
+
+        <dependency
+            name="com.springsource.org.joda.time"
+            conf="runtime->default"
+            org="org.joda"
+            rev="1.6.2" />
+        <dependency org="org.hibernate" name="hibernate-validator" rev="4.2.0.Final" conf="runtime->default"/>
+    </dependencies>
+    
+
 </ivy-module>
