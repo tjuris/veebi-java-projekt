@@ -4,7 +4,7 @@
 	<h1>Hello, Border Guardian!</h1>
 	
 	
-<form name='f' action='/VeebiJavaProjekt/j_spring_security_check' method='POST'>
+<form name='f' action='${pageContext.request.contextPath}/j_spring_security_check' method='POST'>
 	<table>
 		<tr>
 			<td> Kasutaja: </td>

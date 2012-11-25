@@ -9,7 +9,7 @@
 
     <property
         name="project.name"
-        value="VeebiJavaProjekt" />
+        value="BorderGuard" />
 
     <property
         name="project.dir"
@@ -162,10 +162,9 @@
 
         <mkdir dir="${dist.dir}" />
 
-        <!-- original: destfile="${dist.dir}/${project.name}-${team.name}.war"  -->
         <war
             basedir="${web.dir}"
-            destfile="${dist.dir}/VeebiJavaProjekt.war"
+            destfile="${dist.dir}/${project.name}-${team.name}.war"
             webxml="${web-inf.dir}/web.xml" />
 
         <delete file="${dist.dir}/web.xml" />
