@@ -5,7 +5,7 @@
 
     <property
         name="team.name"
-        value="Team 02" />
+        value="Team02" />
 
     <property
         name="project.name"
