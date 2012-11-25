@@ -19,7 +19,7 @@
 		<http auto-config='true' use-expressions="true">
 		<form-login login-page="/login"
 		    default-target-url="/guard/show"
-		    always-use-default-target="false"
+		    always-use-default-target="true"
 		    authentication-failure-url="/login?error=true" />
 		<intercept-url pattern="/**/show" access="permitAll" />
 		<intercept-url pattern="/**/update" access="isAuthenticated()" />
