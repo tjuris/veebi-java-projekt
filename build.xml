@@ -5,7 +5,7 @@
 
     <property
         name="team.name"
-        value="" />
+        value="Team 02" />
 
     <property
         name="project.name"
@@ -162,9 +162,10 @@
 
         <mkdir dir="${dist.dir}" />
 
+        <!-- original: destfile="${dist.dir}/${project.name}-${team.name}.war"  -->
         <war
             basedir="${web.dir}"
-            destfile="${dist.dir}/${project.name}-${team.name}.war"
+            destfile="${dist.dir}/VeebiJavaProjekt.war"
             webxml="${web-inf.dir}/web.xml" />
 
         <delete file="${dist.dir}/web.xml" />
