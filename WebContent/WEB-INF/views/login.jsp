@@ -1,7 +1,7 @@
 <%@ include file="init.jsp" %>
 
 <our:Template>
-	<h1>Hello, twitter!</h1>
+	<h1>Hello, Border Guardian!</h1>
 	
 	
 <form name='f' action='/VeebiJavaProjekt/j_spring_security_check' method='POST'>

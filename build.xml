@@ -5,11 +5,11 @@
 
     <property
         name="team.name"
-        value="Team02" />
+        value="" />
 
     <property
         name="project.name"
-        value="Border Guard" />
+        value="VeebiJavaProjekt" />
 
     <property
         name="project.dir"
