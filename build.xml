@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <project xmlns:ivy="antlib:org.apache.ivy.ant"
-    name="TeamX"
+    name="Team02"
     default="compile" >
 
     <property
         name="team.name"
-        value="TeamX" />
+        value="Team02" />
 
     <property
         name="project.name"
-        value="piirivalve" />
+        value="Border Guard" />
 
     <property
         name="project.dir"

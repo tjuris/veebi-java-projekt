@@ -4,226 +4,449 @@
 	<info
 		organisation="itcollege"
 		module="projekt"
-		revision="working@reim2n-ThinkPad-X61"
+		revision="working@Tanel-sylePC"
 		conf="build"
 		confs="build, runtime, source"
-		date="20121124205336"/>
+		date="20121125190926"/>
 	<dependencies>
 		<module organisation="javax.servlet" name="javax.servlet-api">
-			<revision name="3.0.1" status="release" pubdate="20110712224053" resolver="chain" artresolver="chain" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="21">
+			<revision name="3.0.1" status="release" pubdate="20110712224053" resolver="chain" artresolver="chain" homepage="http://servlet-spec.java.net" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="37">
 				<license name="CDDL + GPLv2 with classpath exception" url="https://glassfish.dev.java.net/nonav/public/CDDL+GPL.html"/>
-				<metadata-artifact status="no" details="" size="4949" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/javax.servlet-api/ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="working@reim2n-ThinkPad-X61"/>
+				<metadata-artifact status="no" details="" size="4949" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\javax.servlet-api\ivy-3.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.0.1" rev-constraint-default="3.0.1" rev-constraint-dynamic="3.0.1" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="85353" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar">
+					<artifact name="javax.servlet-api" type="jar" ext="jar" status="no" details="" size="85353" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\javax.servlet-api\jars\javax.servlet-api-3.0.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
-		<module organisation="org.hibernate" name="hibernate-validator">
-			<revision name="4.2.0.Final" status="release" pubdate="20110620140332" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="18">
-				<metadata-artifact status="no" details="" size="11050" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hibernate/hibernate-validator/ivy-4.2.0.Final.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="4.2.0.Final" rev-constraint-default="4.2.0.Final" rev-constraint-dynamic="4.2.0.Final" callerrev="working@reim2n-ThinkPad-X61"/>
+		<module organisation="org.springframework.security" name="spring-security-taglibs">
+			<revision name="3.1.3.RELEASE" status="release" pubdate="20121009012411" resolver="central" artresolver="central" homepage="http://springsource.org/spring-security" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="35">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4676" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-taglibs\ivy-3.1.3.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-taglibs/3.1.3.RELEASE/spring-security-taglibs-3.1.3.RELEASE.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="hibernate-validator" type="jar" ext="jar" status="no" details="" size="366592" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hibernate/hibernate-validator/jars/hibernate-validator-4.2.0.Final.jar">
+					<artifact name="spring-security-taglibs" type="jar" ext="jar" status="no" details="" size="20981" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-taglibs\jars\spring-security-taglibs-3.1.3.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-taglibs/3.1.3.RELEASE/spring-security-taglibs-3.1.3.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework.security" name="spring-security-acl">
+			<revision name="3.1.3.RELEASE" status="release" pubdate="20121009012433" resolver="central" artresolver="central" homepage="http://springsource.org/spring-security" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="36">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4132" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-acl\ivy-3.1.3.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-acl/3.1.3.RELEASE/spring-security-acl-3.1.3.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-security-acl" type="jar" ext="jar" status="no" details="" size="79531" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-acl\jars\spring-security-acl-3.1.3.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-acl/3.1.3.RELEASE/spring-security-acl-3.1.3.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework.security" name="spring-security-config">
+			<revision name="3.1.3.RELEASE" status="release" pubdate="20121009012411" resolver="central" artresolver="central" homepage="http://springsource.org/spring-security" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="30">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4424" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-config\ivy-3.1.3.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-config/3.1.3.RELEASE/spring-security-config-3.1.3.RELEASE.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="working@Tanel-sylePC"/>
+				<artifacts>
+					<artifact name="spring-security-config" type="jar" ext="jar" status="no" details="" size="203704" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-config\jars\spring-security-config-3.1.3.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-config/3.1.3.RELEASE/spring-security-config-3.1.3.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework.security" name="spring-security-web">
+			<revision name="3.1.3.RELEASE" status="release" pubdate="20121009012427" resolver="central" artresolver="central" homepage="http://springsource.org/spring-security" downloaded="false" searched="false" default="false" conf="default, compile, master(*), compile(*), runtime, runtime(*), master" position="31">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4618" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-web\ivy-3.1.3.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-web/3.1.3.RELEASE/spring-security-web-3.1.3.RELEASE.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="working@Tanel-sylePC"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-security-web" type="jar" ext="jar" status="no" details="" size="253820" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-web\jars\spring-security-web-3.1.3.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-web/3.1.3.RELEASE/spring-security-web-3.1.3.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-web">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014026" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="34">
+				<metadata-artifact status="no" details="" size="9996" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-web\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-web/3.0.7.RELEASE/spring-web-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-web" type="jar" ext="jar" status="no" details="" size="398383" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-web\jars\spring-web-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-web/3.0.7.RELEASE/spring-web-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework.security" name="spring-security-core">
+			<revision name="3.1.3.RELEASE" status="release" pubdate="20121009012407" resolver="central" artresolver="central" homepage="http://springsource.org/spring-security" downloaded="false" searched="false" default="false" conf="default, compile, master(*), compile(*), runtime, runtime(*), master" position="22">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4475" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-core\ivy-3.1.3.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-core/3.1.3.RELEASE/spring-security-core-3.1.3.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="working@Tanel-sylePC"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.1.3.RELEASE" rev-constraint-default="3.1.3.RELEASE" rev-constraint-dynamic="3.1.3.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-security-core" type="jar" ext="jar" status="no" details="" size="340254" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework.security\spring-security-core\jars\spring-security-core-3.1.3.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/security/spring-security-core/3.1.3.RELEASE/spring-security-core-3.1.3.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-jdbc">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014025" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="32">
+				<metadata-artifact status="no" details="" size="7730" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-jdbc\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-jdbc/3.0.7.RELEASE/spring-jdbc-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-jdbc" type="jar" ext="jar" status="no" details="" size="386083" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-jdbc\jars\spring-jdbc-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-jdbc/3.0.7.RELEASE/spring-jdbc-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-tx">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014028" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="33">
+				<metadata-artifact status="no" details="" size="8098" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-tx\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-tx/3.0.7.RELEASE/spring-tx-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-jdbc" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-tx" type="jar" ext="jar" status="no" details="" size="232066" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-tx\jars\spring-tx-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-tx/3.0.7.RELEASE/spring-tx-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-context">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014027" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="28">
+				<metadata-artifact status="no" details="" size="10884" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-context\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-context/3.0.7.RELEASE/spring-context-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-web" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-tx" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-context" type="jar" ext="jar" status="no" details="" size="670388" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-context\jars\spring-context-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-context/3.0.7.RELEASE/spring-context-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-expression">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014025" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="29">
+				<metadata-artifact status="no" details="" size="6895" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-expression\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-expression/3.0.7.RELEASE/spring-expression-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-context" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-expression" type="jar" ext="jar" status="no" details="" size="169749" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-expression\jars\spring-expression-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-expression/3.0.7.RELEASE/spring-expression-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-aop">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014026" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="23">
+				<metadata-artifact status="no" details="" size="7880" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-aop\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-aop/3.0.7.RELEASE/spring-aop-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-tx" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-context" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-aop" type="jar" ext="jar" status="no" details="" size="321435" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-aop\jars\spring-aop-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-aop/3.0.7.RELEASE/spring-aop-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="aopalliance" name="aopalliance">
+			<revision name="1.0" status="release" pubdate="20070227004340" resolver="central" artresolver="central" homepage="http://aopalliance.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="24">
+				<license name="Public Domain"/>
+				<metadata-artifact status="no" details="" size="2416" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\aopalliance\aopalliance\ivy-1.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-aop" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-web" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-tx" conf="compile, runtime" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="1.0" rev-constraint-default="1.0" rev-constraint-dynamic="1.0" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="aopalliance" type="jar" ext="jar" status="no" details="" size="4467" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\aopalliance\aopalliance\jars\aopalliance-1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/aopalliance/aopalliance/1.0/aopalliance-1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-beans">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014028" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="26">
+				<metadata-artifact status="no" details="" size="7368" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-beans\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-beans/3.0.7.RELEASE/spring-beans-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework" name="spring-jdbc" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-aop" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-web" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-tx" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-context" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-beans" type="jar" ext="jar" status="no" details="" size="556747" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-beans\jars\spring-beans-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-beans/3.0.7.RELEASE/spring-beans-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-core">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014024" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="27">
+				<metadata-artifact status="no" details="" size="7721" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-core\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-core/3.0.7.RELEASE/spring-core-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework.security" name="spring-security-acl" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-jdbc" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-aop" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-web" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-core" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-tx" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-config" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-context" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-web" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-beans" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-expression" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework.security" name="spring-security-taglibs" conf="default, compile, runtime, master" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.1.3.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-core" type="jar" ext="jar" status="no" details="" size="383621" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-core\jars\spring-core-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-core/3.0.7.RELEASE/spring-core-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.springframework" name="spring-asm">
+			<revision name="3.0.7.RELEASE" status="release" pubdate="20111224014027" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="25">
+				<metadata-artifact status="no" details="" size="4780" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-asm\ivy-3.0.7.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/springframework/spring-asm/3.0.7.RELEASE/spring-asm-3.0.7.RELEASE.pom"/>
+				<caller organisation="org.springframework" name="spring-aop" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-context" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<caller organisation="org.springframework" name="spring-core" conf="compile, runtime" rev="3.0.7.RELEASE" rev-constraint-default="3.0.7.RELEASE" rev-constraint-dynamic="3.0.7.RELEASE" callerrev="3.0.7.RELEASE"/>
+				<artifacts>
+					<artifact name="spring-asm" type="jar" ext="jar" status="no" details="" size="53082" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\spring-asm\jars\spring-asm-3.0.7.RELEASE.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/springframework/spring-asm/3.0.7.RELEASE/spring-asm-3.0.7.RELEASE.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.hibernate" name="hibernate-validator">
+			<revision name="4.2.0.Final" status="release" pubdate="20110620140332" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="19">
+				<metadata-artifact status="no" details="" size="11157" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.hibernate\hibernate-validator\ivy-4.2.0.Final.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="4.2.0.Final" rev-constraint-default="4.2.0.Final" rev-constraint-dynamic="4.2.0.Final" callerrev="working@Tanel-sylePC"/>
+				<artifacts>
+					<artifact name="hibernate-validator" type="jar" ext="jar" status="no" details="" size="366592" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.hibernate\hibernate-validator\jars\hibernate-validator-4.2.0.Final.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/hibernate/hibernate-validator/4.2.0.Final/hibernate-validator-4.2.0.Final.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.slf4j" name="slf4j-api">
-			<revision name="1.6.1" status="release" pubdate="20100705232924" resolver="central" artresolver="central" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="20">
-				<metadata-artifact status="no" details="" size="4320" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.slf4j/slf4j-api/ivy-1.6.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom"/>
+			<revision name="1.6.1" status="release" pubdate="20100705232924" resolver="central" artresolver="central" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="21">
+				<metadata-artifact status="no" details="" size="4365" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.slf4j\slf4j-api\ivy-1.6.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.pom"/>
 				<caller organisation="org.hibernate" name="hibernate-validator" conf="default, compile, runtime, master" rev="1.6.1" rev-constraint-default="1.6.1" rev-constraint-dynamic="1.6.1" callerrev="4.2.0.Final"/>
 				<artifacts>
-					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="25496" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.slf4j/slf4j-api/jars/slf4j-api-1.6.1.jar">
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="25496" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.slf4j\slf4j-api\jars\slf4j-api-1.6.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.validation" name="validation-api">
-			<revision name="1.0.0.GA" status="release" pubdate="20100225074311" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="19">
+			<revision name="1.0.0.GA" status="release" pubdate="20100225074311" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="20">
 				<license name="Apache License, Version 2.0" url="license.txt"/>
-				<metadata-artifact status="no" details="" size="2520" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.validation/validation-api/ivy-1.0.0.GA.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.pom"/>
+				<metadata-artifact status="no" details="" size="2551" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.validation\validation-api\ivy-1.0.0.GA.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.pom"/>
 				<caller organisation="org.hibernate" name="hibernate-validator" conf="default, compile, runtime, master" rev="1.0.0.GA" rev-constraint-default="1.0.0.GA" rev-constraint-dynamic="1.0.0.GA" callerrev="4.2.0.Final"/>
 				<artifacts>
-					<artifact name="validation-api" type="jar" ext="jar" status="no" details="" size="47433" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.validation/validation-api/jars/validation-api-1.0.0.GA.jar">
+					<artifact name="validation-api" type="jar" ext="jar" status="no" details="" size="47433" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.validation\validation-api\jars\validation-api-1.0.0.GA.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.joda" name="com.springsource.org.joda.time">
-			<revision name="1.6.2" status="release" pubdate="20121108004637" resolver="springsource-external" artresolver="springsource-external" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="17">
-				<metadata-artifact status="no" details="" size="2343" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.joda/com.springsource.org.joda.time/ivy-1.6.2.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/external/org/joda/com.springsource.org.joda.time/1.6.2/com.springsource.org.joda.time-1.6.2.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.6.2" rev-constraint-default="1.6.2" rev-constraint-dynamic="1.6.2" callerrev="working@reim2n-ThinkPad-X61"/>
+			<revision name="1.6.2" status="release" pubdate="20121108004637" resolver="springsource-external" artresolver="springsource-external" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="18">
+				<metadata-artifact status="no" details="" size="2370" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.joda\com.springsource.org.joda.time\ivy-1.6.2.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/external/org/joda/com.springsource.org.joda.time/1.6.2/com.springsource.org.joda.time-1.6.2.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.6.2" rev-constraint-default="1.6.2" rev-constraint-dynamic="1.6.2" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="com.springsource.org.joda.time" type="jar" ext="jar" status="no" details="" size="553850" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.joda/com.springsource.org.joda.time/jars/com.springsource.org.joda.time-1.6.2.jar">
+					<artifact name="com.springsource.org.joda.time" type="jar" ext="jar" status="no" details="" size="553850" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.joda\com.springsource.org.joda.time\jars\com.springsource.org.joda.time-1.6.2.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/external/org/joda/com.springsource.org.joda.time/1.6.2/com.springsource.org.joda.time-1.6.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="javax.servlet" name="jstl">
-			<revision name="1.2" status="release" pubdate="20110623202002" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="16">
-				<metadata-artifact status="no" details="" size="2436" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/jstl/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="working@reim2n-ThinkPad-X61"/>
+			<revision name="1.2" status="release" pubdate="20110623202002" resolver="chain" artresolver="chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="17">
+				<metadata-artifact status="no" details="" size="2466" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\jstl\ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="jstl" type="jar" ext="jar" status="no" details="" size="414240" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/javax.servlet/jstl/jars/jstl-1.2.jar">
+					<artifact name="jstl" type="jar" ext="jar" status="no" details="" size="414240" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\jstl\jars\jstl-1.2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/javax/servlet/jstl/1.2/jstl-1.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.codehaus.jackson" name="jackson-mapper-asl">
-			<revision name="1.9.10" status="release" pubdate="20120924055612" resolver="central" artresolver="central" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="14">
+			<revision name="1.9.10" status="release" pubdate="20120924055612" resolver="chain" artresolver="chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="15">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2757" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.codehaus.jackson/jackson-mapper-asl/ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.10/jackson-mapper-asl-1.9.10.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="working@reim2n-ThinkPad-X61"/>
+				<metadata-artifact status="no" details="" size="2790" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.codehaus.jackson\jackson-mapper-asl\ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.10/jackson-mapper-asl-1.9.10.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="jackson-mapper-asl" type="jar" ext="jar" status="no" details="" size="780421" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.codehaus.jackson/jackson-mapper-asl/jars/jackson-mapper-asl-1.9.10.jar">
+					<artifact name="jackson-mapper-asl" type="jar" ext="jar" status="no" details="" size="780421" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.codehaus.jackson\jackson-mapper-asl\jars\jackson-mapper-asl-1.9.10.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-mapper-asl/1.9.10/jackson-mapper-asl-1.9.10.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.codehaus.jackson" name="jackson-core-asl">
-			<revision name="1.9.10" status="release" pubdate="20120924055540" resolver="central" artresolver="central" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="15">
+			<revision name="1.9.10" status="release" pubdate="20120924055540" resolver="chain" artresolver="chain" homepage="http://jackson.codehaus.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="16">
 				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2538" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.codehaus.jackson/jackson-core-asl/ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.10/jackson-core-asl-1.9.10.pom"/>
+				<metadata-artifact status="no" details="" size="2568" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.codehaus.jackson\jackson-core-asl\ivy-1.9.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.10/jackson-core-asl-1.9.10.pom"/>
 				<caller organisation="org.codehaus.jackson" name="jackson-mapper-asl" conf="default, compile, runtime, master" rev="1.9.10" rev-constraint-default="1.9.10" rev-constraint-dynamic="1.9.10" callerrev="1.9.10"/>
 				<artifacts>
-					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232119" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.codehaus.jackson/jackson-core-asl/jars/jackson-core-asl-1.9.10.jar">
+					<artifact name="jackson-core-asl" type="jar" ext="jar" status="no" details="" size="232119" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.codehaus.jackson\jackson-core-asl\jars\jackson-core-asl-1.9.10.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/codehaus/jackson/jackson-core-asl/1.9.10/jackson-core-asl-1.9.10.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="cglib" name="cglib">
-			<revision name="2.2.2" status="release" pubdate="20110510165413" resolver="central" artresolver="central" homepage="http://cglib.sourceforge.net/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="12">
+			<revision name="2.2.2" status="release" pubdate="20110510165413" resolver="chain" artresolver="chain" homepage="http://cglib.sourceforge.net/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="13">
 				<license name="ASF 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
-				<metadata-artifact status="no" details="" size="2864" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/cglib/cglib/ivy-2.2.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/cglib/cglib/2.2.2/cglib-2.2.2.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="2.2.2" rev-constraint-default="2.2.2" rev-constraint-dynamic="2.2.2" callerrev="working@reim2n-ThinkPad-X61"/>
+				<metadata-artifact status="no" details="" size="2900" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\cglib\cglib\ivy-2.2.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/cglib/cglib/2.2.2/cglib-2.2.2.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="2.2.2" rev-constraint-default="2.2.2" rev-constraint-dynamic="2.2.2" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="cglib" type="jar" ext="jar" status="no" details="" size="287192" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/cglib/cglib/jars/cglib-2.2.2.jar">
+					<artifact name="cglib" type="jar" ext="jar" status="no" details="" size="287192" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\cglib\cglib\jars\cglib-2.2.2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/cglib/cglib/2.2.2/cglib-2.2.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="asm" name="asm">
-			<revision name="3.3.1" status="release" pubdate="20110112160134" resolver="central" artresolver="central" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="13">
-				<metadata-artifact status="no" details="" size="2814" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/asm/asm/ivy-3.3.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/asm/asm/3.3.1/asm-3.3.1.pom"/>
+			<revision name="3.3.1" status="release" pubdate="20110112160134" resolver="chain" artresolver="chain" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="14">
+				<metadata-artifact status="no" details="" size="2846" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\asm\asm\ivy-3.3.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/asm/asm/3.3.1/asm-3.3.1.pom"/>
 				<caller organisation="cglib" name="cglib" conf="default, compile, runtime, master" rev="3.3.1" rev-constraint-default="3.3.1" rev-constraint-dynamic="3.3.1" callerrev="2.2.2"/>
 				<artifacts>
-					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="43581" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/asm/asm/jars/asm-3.3.1.jar">
+					<artifact name="asm" type="jar" ext="jar" status="no" details="" size="43581" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\asm\asm\jars\asm-3.3.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/asm/asm/3.3.1/asm-3.3.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="commons-logging" name="commons-logging">
-			<revision name="1.1.1" status="release" pubdate="20071126222410" resolver="central" artresolver="central" homepage="http://commons.apache.org/logging" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="11">
-				<metadata-artifact status="no" details="" size="4140" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/commons-logging/commons-logging/ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="working@reim2n-ThinkPad-X61"/>
+			<revision name="1.1.1" status="release" pubdate="20071126222410" resolver="chain" artresolver="chain" homepage="http://commons.apache.org/logging" downloaded="false" searched="false" default="false" conf="default, compile, master(*), compile(*), runtime, runtime(*), master" position="12">
+				<metadata-artifact status="no" details="" size="4182" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\commons-logging\commons-logging\ivy-1.1.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="working@Tanel-sylePC"/>
+				<caller organisation="org.springframework" name="spring-core" conf="compile, runtime" rev="1.1.1" rev-constraint-default="1.1.1" rev-constraint-dynamic="1.1.1" callerrev="3.0.7.RELEASE"/>
 				<artifacts>
-					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="60686" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/commons-logging/commons-logging/jars/commons-logging-1.1.1.jar">
+					<artifact name="commons-logging" type="jar" ext="jar" status="no" details="" size="60686" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\commons-logging\commons-logging\jars\commons-logging-1.1.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.web.servlet">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195736" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="9">
-				<metadata-artifact status="no" details="" size="9024" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.web.servlet/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web.servlet/3.1.2.RELEASE/org.springframework.web.servlet-3.1.2.RELEASE.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="working@reim2n-ThinkPad-X61"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195736" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="10">
+				<metadata-artifact status="no" details="" size="9097" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.web.servlet\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web.servlet/3.1.2.RELEASE/org.springframework.web.servlet-3.1.2.RELEASE.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="org.springframework.web.servlet" type="jar" ext="jar" status="no" details="" size="577502" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.web.servlet/jars/org.springframework.web.servlet-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.web.servlet" type="jar" ext="jar" status="no" details="" size="577502" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.web.servlet\jars\org.springframework.web.servlet-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web.servlet/3.1.2.RELEASE/org.springframework.web.servlet-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.context.support">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195612" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="10">
-				<metadata-artifact status="no" details="" size="5346" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.context.support/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context.support/3.1.2.RELEASE/org.springframework.context.support-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195612" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="11">
+				<metadata-artifact status="no" details="" size="5395" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.context.support\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context.support/3.1.2.RELEASE/org.springframework.context.support-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.web.servlet" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.context.support" type="jar" ext="jar" status="no" details="" size="107014" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.context.support/jars/org.springframework.context.support-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.context.support" type="jar" ext="jar" status="no" details="" size="107014" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.context.support\jars\org.springframework.context.support-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context.support/3.1.2.RELEASE/org.springframework.context.support-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.web">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195443" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, master(*), compile(*), runtime, runtime(*), master" position="1">
-				<metadata-artifact status="no" details="" size="6993" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.web/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web/3.1.2.RELEASE/org.springframework.web-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195443" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, master(*), compile(*), runtime, runtime(*), master" position="2">
+				<metadata-artifact status="no" details="" size="7053" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.web\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web/3.1.2.RELEASE/org.springframework.web-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.web.servlet" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="working@reim2n-ThinkPad-X61"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="org.springframework.web" type="jar" ext="jar" status="no" details="" size="548703" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.web/jars/org.springframework.web-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.web" type="jar" ext="jar" status="no" details="" size="548703" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.web\jars\org.springframework.web-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.web/3.1.2.RELEASE/org.springframework.web-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.context">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195056" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="7">
-				<metadata-artifact status="no" details="" size="7515" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.context/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context/3.1.2.RELEASE/org.springframework.context-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707195056" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="8">
+				<metadata-artifact status="no" details="" size="7579" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.context\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context/3.1.2.RELEASE/org.springframework.context-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.context.support" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web.servlet" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.context" type="jar" ext="jar" status="no" details="" size="832018" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.context/jars/org.springframework.context-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.context" type="jar" ext="jar" status="no" details="" size="832018" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.context\jars\org.springframework.context-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.context/3.1.2.RELEASE/org.springframework.context-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.expression">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194825" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="8">
-				<metadata-artifact status="no" details="" size="2979" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.expression/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.expression/3.1.2.RELEASE/org.springframework.expression-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194825" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="9">
+				<metadata-artifact status="no" details="" size="3012" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.expression\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.expression/3.1.2.RELEASE/org.springframework.expression-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.context" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web.servlet" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.expression" type="jar" ext="jar" status="no" details="" size="176087" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.expression/jars/org.springframework.expression-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.expression" type="jar" ext="jar" status="no" details="" size="176087" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.expression\jars\org.springframework.expression-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.expression/3.1.2.RELEASE/org.springframework.expression-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.aop">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194956" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="3">
-				<metadata-artifact status="no" details="" size="4133" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.aop/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.aop/3.1.2.RELEASE/org.springframework.aop-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194956" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
+				<metadata-artifact status="no" details="" size="4174" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.aop\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.aop/3.1.2.RELEASE/org.springframework.aop-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.context" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.aop" type="jar" ext="jar" status="no" details="" size="332641" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.aop/jars/org.springframework.aop-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.aop" type="jar" ext="jar" status="no" details="" size="332641" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.aop\jars\org.springframework.aop-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.aop/3.1.2.RELEASE/org.springframework.aop-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.beans">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194909" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
-				<metadata-artifact status="no" details="" size="3841" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.beans/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.beans/3.1.2.RELEASE/org.springframework.beans-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194909" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="5">
+				<metadata-artifact status="no" details="" size="3880" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.beans\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.beans/3.1.2.RELEASE/org.springframework.beans-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.aop" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.context.support" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.context" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web.servlet" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.beans" type="jar" ext="jar" status="no" details="" size="592232" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.beans/jars/org.springframework.beans-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.beans" type="jar" ext="jar" status="no" details="" size="592232" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.beans\jars\org.springframework.beans-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.beans/3.1.2.RELEASE/org.springframework.beans-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.core">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194741" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="5">
-				<metadata-artifact status="no" details="" size="3798" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.core/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.core/3.1.2.RELEASE/org.springframework.core-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194741" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
+				<metadata-artifact status="no" details="" size="3837" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.core\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.core/3.1.2.RELEASE/org.springframework.core-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.aop" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.context.support" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.context" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
@@ -232,44 +455,55 @@
 				<caller organisation="org.springframework" name="org.springframework.expression" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web" conf="default, compile, runtime, master" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.core" type="jar" ext="jar" status="no" details="" size="449649" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.core/jars/org.springframework.core-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.core" type="jar" ext="jar" status="no" details="" size="449649" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.core\jars\org.springframework.core-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.core/3.1.2.RELEASE/org.springframework.core-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.springframework" name="org.springframework.asm">
-			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194530" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
-				<metadata-artifact status="no" details="" size="2672" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.asm/ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.asm/3.1.2.RELEASE/org.springframework.asm-3.1.2.RELEASE.pom"/>
+			<revision name="3.1.2.RELEASE" status="release" pubdate="20120707194530" resolver="springsource-release" artresolver="springsource-release" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="7">
+				<metadata-artifact status="no" details="" size="2703" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.asm\ivy-3.1.2.RELEASE.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.asm/3.1.2.RELEASE/org.springframework.asm-3.1.2.RELEASE.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.context" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.beans" conf="compile, runtime" rev="3.1.2.RELEASE" rev-constraint-default="3.1.2.RELEASE" rev-constraint-dynamic="3.1.2.RELEASE" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="org.springframework.asm" type="jar" ext="jar" status="no" details="" size="53082" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.springframework/org.springframework.asm/jars/org.springframework.asm-3.1.2.RELEASE.jar">
+					<artifact name="org.springframework.asm" type="jar" ext="jar" status="no" details="" size="53082" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.springframework\org.springframework.asm\jars\org.springframework.asm-3.1.2.RELEASE.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/release/org/springframework/org.springframework.asm/3.1.2.RELEASE/org.springframework.asm-3.1.2.RELEASE.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.aopalliance" name="com.springsource.org.aopalliance">
-			<revision name="1.0.0" status="release" pubdate="20090204152025" resolver="springsource-external" artresolver="springsource-external" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="2">
-				<metadata-artifact status="no" details="" size="2356" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.aopalliance/com.springsource.org.aopalliance/ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/external/org/aopalliance/com.springsource.org.aopalliance/1.0.0/com.springsource.org.aopalliance-1.0.0.pom"/>
+			<revision name="1.0.0" status="release" pubdate="20090204152025" resolver="springsource-external" artresolver="springsource-external" homepage="" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="3">
+				<metadata-artifact status="no" details="" size="2383" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.aopalliance\com.springsource.org.aopalliance\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/external/org/aopalliance/com.springsource.org.aopalliance/1.0.0/com.springsource.org.aopalliance-1.0.0.pom"/>
 				<caller organisation="org.springframework" name="org.springframework.aop" conf="compile, runtime" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="3.1.2.RELEASE"/>
 				<caller organisation="org.springframework" name="org.springframework.web" conf="default, compile, runtime, master" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="3.1.2.RELEASE"/>
 				<artifacts>
-					<artifact name="com.springsource.org.aopalliance" type="jar" ext="jar" status="no" details="" size="4615" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.aopalliance/com.springsource.org.aopalliance/jars/com.springsource.org.aopalliance-1.0.0.jar">
+					<artifact name="com.springsource.org.aopalliance" type="jar" ext="jar" status="no" details="" size="4615" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.aopalliance\com.springsource.org.aopalliance\jars\com.springsource.org.aopalliance-1.0.0.jar">
 						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/external/org/aopalliance/com.springsource.org.aopalliance/1.0.0/com.springsource.org.aopalliance-1.0.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.hsqldb" name="hsqldb">
-			<revision name="1.8.0.10" status="release" pubdate="20090424215902" resolver="chain" artresolver="chain" homepage="http://hsqldb.org/" downloaded="false" searched="false" default="false" conf="system, default, optional, compile, *, provided, runtime, javadoc, sources, master" position="0">
+			<revision name="1.8.0.10" status="release" pubdate="20090424215902" resolver="chain" artresolver="chain" homepage="http://hsqldb.org/" downloaded="false" searched="false" default="false" conf="system, default, optional, compile, *, provided, runtime, javadoc, sources, master" position="1">
 				<license name="HSQLDB License, a BSD open source license" url="http://hsqldb.org/web/hsqlLicense.html"/>
-				<metadata-artifact status="no" details="" size="3091" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hsqldb/hsqldb/ivy-1.8.0.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.pom"/>
-				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.8.0.10" rev-constraint-default="1.8.0.10" rev-constraint-dynamic="1.8.0.10" callerrev="working@reim2n-ThinkPad-X61"/>
+				<metadata-artifact status="no" details="" size="3091" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.hsqldb\hsqldb\ivy-1.8.0.10.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="1.8.0.10" rev-constraint-default="1.8.0.10" rev-constraint-dynamic="1.8.0.10" callerrev="working@Tanel-sylePC"/>
 				<artifacts>
-					<artifact name="hsqldb" type="jar" ext="jar" status="no" details="" size="706710" time="0" location="/home/reim2n/git/veebi-java-projekt/ivy/org.hsqldb/hsqldb/jars/hsqldb-1.8.0.10.jar">
+					<artifact name="hsqldb" type="jar" ext="jar" status="no" details="" size="706710" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\org.hsqldb\hsqldb\jars\hsqldb-1.8.0.10.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/hsqldb/hsqldb/1.8.0.10/hsqldb-1.8.0.10.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="javax.servlet" name="com.springsource.javax.servlet.jsp">
+			<revision name="2.1.0" status="release" pubdate="20090204153029" resolver="springsource-external" artresolver="springsource-external" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, master" position="0">
+				<metadata-artifact status="no" details="" size="2734" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\com.springsource.javax.servlet.jsp\ivy-2.1.0.xml" searched="false" origin-is-local="false" origin-location="http://repository.springsource.com/maven/bundles/external/javax/servlet/com.springsource.javax.servlet.jsp/2.1.0/com.springsource.javax.servlet.jsp-2.1.0.pom"/>
+				<caller organisation="itcollege" name="projekt" conf="source, runtime, build" rev="2.1.0" rev-constraint-default="2.1.0" rev-constraint-dynamic="2.1.0" callerrev="working@Tanel-sylePC"/>
+				<artifacts>
+					<artifact name="com.springsource.javax.servlet.jsp" type="jar" ext="jar" status="no" details="" size="82151" time="0" location="C:\Users\Tanel\git\veebi-java-projekt\ivy\javax.servlet\com.springsource.javax.servlet.jsp\jars\com.springsource.javax.servlet.jsp-2.1.0.jar">
+						<origin-location is-local="false" location="http://repository.springsource.com/maven/bundles/external/javax/servlet/com.springsource.javax.servlet.jsp/2.1.0/com.springsource.javax.servlet.jsp-2.1.0.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

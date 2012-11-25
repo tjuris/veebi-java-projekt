@@ -37,4 +37,35 @@ public class IncidentController {
 		model.addAttribute("msg", incident.getLocation());
 		return "showIncident";
 	}
+	
+	@RequestMapping("/guard/show")
+	public String showGuard() {
+		return "showGuard";
+	}
+	
+	@RequestMapping("/guard/update")
+	public String updateGuard() {
+		return "updateGuard";
+	}
+	
+	@RequestMapping("/guard/delete")
+	public String deleteGuard() {
+		return "deleteGuard";
+	}
+	
+	@RequestMapping("/borderStation/show")
+	public String showBorderStation() {
+		return "showBorderStation";
+	}
+	
+	@RequestMapping("/borderStation/update")
+	public String updateBorderStation() {
+		return "updateBorderStation";
+	}
+	
+	@RequestMapping("/borderStation/delete")
+	public String deleteBorderStation() {
+		return "deleteBorderStation";
+	}
+	
 }

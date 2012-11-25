@@ -1,10 +1,12 @@
 <beans:beans xmlns="http://www.springframework.org/schema/security"
 	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
-		http://www.springframework.org/schema/security
-		http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+     
 		
 		<http pattern="/css/**" security="none" />
 		<http pattern="/js/**" security="none" />
@@ -12,17 +14,32 @@
 		<http pattern="/login*" security="none" />
 		
 		
-		<http auto-config='true'>
-			<intercept-url pattern="/**" access="ROLE_USER" />
+		<global-method-security pre-post-annotations="enabled" secured-annotations="enabled" />
+		
+		<http auto-config='true' use-expressions="true">
+		<form-login login-page="/login"
+		    default-target-url="/guard/show"
+		    always-use-default-target="false"
+		    authentication-failure-url="/login?error=true" />
+		<intercept-url pattern="/**/show" access="permitAll" />
+		<intercept-url pattern="/**/update" access="isAuthenticated()" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
+		
+		
+		<logout logout-success-url="/login"/>
 		</http>
 		
-	<authentication-manager>
-		<authentication-provider>
-			<user-service>
-				<user name="lauri" password="par00l" authorities="ROLE_USER, ROLE_ADMIN" />
-				<user name="tester" password="t3st"	authorities="ROLE_USER" />
-			</user-service>
-		</authentication-provider>
-	</authentication-manager>
+		<authentication-manager>
+			<authentication-provider>
+				<password-encoder hash="sha" />
+				<user-service>
+					<user name="admin"
+						authorities="ROLE_ADMIN, ROLE_USER"
+						password="d033e22ae348aeb5660fc2140aec35850c4da997" />
+					<user name="ylem" authorities="ROLE_USER"
+						password="a6f80d0d248636b5a3fd641f14b68487953dbcac" />
+				</user-service>
+			</authentication-provider>
+		</authentication-manager>
 		
 </beans:beans>

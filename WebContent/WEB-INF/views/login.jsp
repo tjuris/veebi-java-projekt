@@ -3,8 +3,8 @@
 <our:Template>
 	<h1>Hello, twitter!</h1>
 	
-	<!-- probleemne koht action -->
-<form name='f' action='/veebi-java-projekt/j_spring_security_check' method='POST'>
+	
+<form name='f' action='/VeebiJavaProjekt/j_spring_security_check' method='POST'>
 	<table>
 		<tr>
 			<td> Kasutaja: </td>
