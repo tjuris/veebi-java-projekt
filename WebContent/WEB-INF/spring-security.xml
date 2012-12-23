@@ -34,7 +34,7 @@
 				<password-encoder hash="sha" />
 				<user-service>
 					<user name="admin"
-						authorities="ROLE_ADMIN, ROLE_USER"
+						authorities="ROLE_ADMIN, update, ROLE_USER"
 						password="d033e22ae348aeb5660fc2140aec35850c4da997" />
 					<user name="ylem" authorities="ROLE_USER, update"
 						password="a6f80d0d248636b5a3fd641f14b68487953dbcac" />

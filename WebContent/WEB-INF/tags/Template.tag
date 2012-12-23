@@ -21,6 +21,13 @@
 			<div class="container">
 				<div class="nav-collapse collapse">
 					<ul class="nav">
+						<sec:authorize access="hasRole('ROLE_ADMIN')">
+							<li><a href="${pageContext.request.contextPath}/guard/add">Lisa Piirivalvureid</a></li>
+							<li><a href="${pageContext.request.contextPath}/vahtkond/add">Lisa Vahtkondi</a></li>
+							<li><a href="${pageContext.request.contextPath}/auaste/add">Lisa Auastmeid</a></li>
+							<li><a href="${pageContext.request.contextPath}/vahtkonnaLiige/add">Lisa Vahtkondade Liikmeid</a></li>
+							<li><a href="${pageContext.request.contextPath}/piirivalvurAuaste/add">Lisa Piirivalvurite Auastmeid</a></li>
+						</sec:authorize>
 						<sec:authorize access="hasRole('ROLE_USER')">
 							<li><a href="${pageContext.request.contextPath}/guard/show">Näita Piirivalvureid</a></li>
 							<li><a href="${pageContext.request.contextPath}/vahtkond/show">Näita Vahtkondi</a></li>
