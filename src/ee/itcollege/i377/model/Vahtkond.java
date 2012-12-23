@@ -13,8 +13,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 @NamedQueries({
-    @NamedQuery(name="Vahtkond.findAll", query="SELECT g FROM Piirivalvur g WHERE g.suletud = NULL"),
-    @NamedQuery(name="Vahtkond.findById", query="SELECT g FROM Piirivalvur g WHERE g.id = :id")
+    @NamedQuery(name="Vahtkond.findAll", query="SELECT g FROM Vahtkond g WHERE g.suletud = NULL"),
+    @NamedQuery(name="Vahtkond.findById", query="SELECT g FROM Vahtkond g WHERE g.id = :id")
 })
 @Entity
 public class Vahtkond implements Serializable  {
@@ -40,8 +40,8 @@ public class Vahtkond implements Serializable  {
 	
 	private int version;
 	
-	private String piiripunkt;
-	private String vaeosa;
+	private String piiripunkt_id;
+	private String vaeosa_id;
 	
 	private String avaja;
 	private String muutja;
@@ -78,20 +78,20 @@ public class Vahtkond implements Serializable  {
 		this.nimetus = nimetus;
 	}
 
-	public String getPiiripunkt() {
-		return piiripunkt;
+	public String getPiiripunkt_id() {
+		return piiripunkt_id;
 	}
 
-	public void setPiiripunkt(String piiripunkt) {
-		this.piiripunkt = piiripunkt;
+	public void setPiiripunkt_id(String piiripunkt_id) {
+		this.piiripunkt_id = piiripunkt_id;
 	}
 
-	public String getVaeosa() {
-		return vaeosa;
+	public String getVaeosa_id() {
+		return vaeosa_id;
 	}
 
-	public void setVaeosa(String vaeosa) {
-		this.vaeosa = vaeosa;
+	public void setVaeosa_id(String vaeosa_id) {
+		this.vaeosa_id = vaeosa_id;
 	}
 
 	public String getKommentaar() {

@@ -13,8 +13,8 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 @NamedQueries({
-    @NamedQuery(name="Auaste.findAll", query="SELECT g FROM Piirivalvur g WHERE g.suletud = NULL"),
-    @NamedQuery(name="Auaste.findById", query="SELECT g FROM Piirivalvur g WHERE g.id = :id")
+    @NamedQuery(name="Auaste.findAll", query="SELECT g FROM Auaste g WHERE g.suletud = NULL"),
+    @NamedQuery(name="Auaste.findById", query="SELECT g FROM Auaste g WHERE g.id = :id")
 })
 @Entity
 public class Auaste implements Serializable  {

@@ -18,7 +18,7 @@ import ee.itcollege.i377.iseseisev3.Incident;
 import ee.itcollege.i377.model.Vahtkond;
 import ee.itcollege.i377.service.VahtkondServiceImpl;
 
-//@Controller
+@Controller
 public class VahtkondController {
 	
 	Long originalVahtkondId;
@@ -27,55 +27,49 @@ public class VahtkondController {
 	@Resource
 	private VahtkondServiceImpl vahtkondServiceImpl;
 	
-	@RequestMapping("/login")
-	public String login() {
-		return "login";
-	}
 	
-	
-	@RequestMapping("/guard/show")
-	public String showGuard(Model model) {
+	@RequestMapping("/vahtkond/show")
+	public String showVahtkond(Model model) {
 		List<Vahtkond> vahtkonds = vahtkondServiceImpl.getAllVahtkonds();
 		model.addAttribute("allVahtkonds", vahtkonds);
-		return "showGuard";
+		return "showVahtkond";
 	}
 	
-	@RequestMapping("/guard/add")
-	public String addGuard(Model model) {
-		//List<Vahtkond> vahtkonds = vahtkondServiceImpl.getAllVahtkonds();
+	@RequestMapping("/vahtkond/add")
+	public String addVahtkond(Model model) {
 		model.addAttribute("vahtkond", new Vahtkond());
-		return "addGuard";
+		return "addVahtkond";
 	}
 	
-	@RequestMapping(value="/guard/add", method = RequestMethod.POST)
-	public String addGuard(@ModelAttribute Vahtkond vahtkond, Model model) {
+	@RequestMapping(value="/vahtkond/add", method = RequestMethod.POST)
+	public String addVahtkond(@ModelAttribute Vahtkond vahtkond, Model model) {
 		vahtkondServiceImpl.addVahtkond(vahtkond);
 		model.addAttribute("added", true);
-		return "addGuard";
+		return "addVahtkond";
 	}
 	
-	@RequestMapping("/guard/update")
-	public String updateGuard(@RequestParam("id") String updateId, Model model) {
+	@RequestMapping("/vahtkond/update")
+	public String updateVahtkond(@RequestParam("id") String updateId, Model model) {
 		originalVahtkondId = Long.valueOf(updateId).longValue();
 		originalVahtkond = vahtkondServiceImpl.getVahtkondById(originalVahtkondId);
 		model.addAttribute("vahtkond", vahtkondServiceImpl.getVahtkondById(originalVahtkondId));
-		return "updateGuard";
+		return "updateVahtkond";
 	}
 	
-	@RequestMapping(value="/guard/update", method = RequestMethod.POST)
-	public String updateGuardPost(@ModelAttribute Vahtkond vahtkond, Model model) {
+	@RequestMapping(value="/vahtkond/update", method = RequestMethod.POST)
+	public String updateVahtkondPost(@ModelAttribute Vahtkond vahtkond, Model model) {
 		vahtkond.setId(originalVahtkondId);
 		vahtkond.setAvaja(originalVahtkond.getAvaja());
 		vahtkond.setAvatud(originalVahtkond.getAvatud());
 		vahtkondServiceImpl.updateVahtkond(vahtkond);
 		model.addAttribute("updated", true);
-		return "updateGuard";
+		return "updateVahtkond";
 	}
 	
-	@RequestMapping("/guard/delete")
-	public String deleteGuard(@RequestParam("id") String deleteId, Model model) {
+	@RequestMapping("/vahtkond/delete")
+	public String deleteVahtkond(@RequestParam("id") String deleteId, Model model) {
 		vahtkondServiceImpl.deleteVahtkondById(Long.valueOf(deleteId).longValue());
-		return "redirect:/guard/show";
+		return "redirect:/vahtkond/show";
 	}
 	
 }

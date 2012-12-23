@@ -21,8 +21,8 @@
 		    default-target-url="/guard/show"
 		    always-use-default-target="true"
 		    authentication-failure-url="/login?error=true" />
-		<intercept-url pattern="/**/show" access="permitAll" />
-		<intercept-url pattern="/**/update" access="isAuthenticated()" />
+		<intercept-url pattern="/**/show" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/**/update" access="hasRole('update')" />
 		<intercept-url pattern="/**" access="hasRole('ROLE_ADMIN')" />
 		
 		
@@ -36,8 +36,10 @@
 					<user name="admin"
 						authorities="ROLE_ADMIN, ROLE_USER"
 						password="d033e22ae348aeb5660fc2140aec35850c4da997" />
-					<user name="ylem" authorities="ROLE_USER"
+					<user name="ylem" authorities="ROLE_USER, update"
 						password="a6f80d0d248636b5a3fd641f14b68487953dbcac" />
+					<user name="valvur" authorities="ROLE_USER"
+						password="8db22d4ef307ae1b01d13ac1ed51c1abf24a738d" />
 				</user-service>
 			</authentication-provider>
 		</authentication-manager>
