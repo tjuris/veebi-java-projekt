@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="ee.itcollege.i377.iseseisev3")
+@ComponentScan(basePackages="ee.itcollege.i377")
 public class DispatcherConfig extends WebMvcConfigurerAdapter{
 
 	@Bean

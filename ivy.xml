@@ -39,10 +39,9 @@
             org="javax.servlet"
             rev="3.0.1" />
 
-        <dependency
-            name="hsqldb"
-            org="org.hsqldb"
-            rev="1.8.0.10" />
+        <dependency org="org.hsqldb" name="hsqldb" rev="2.2.8" conf="source,runtime->default"/>
+        <!-- 1.8.0.10 throws errors, use 2.2.8  -->
+        
 
         <dependency
             name="org.springframework.web"
@@ -86,6 +85,7 @@
             org="org.joda"
             rev="1.6.2" />
         <dependency org="org.hibernate" name="hibernate-validator" rev="4.2.0.Final" conf="runtime->default"/>
+        <dependency org="org.hibernate" name="hibernate-entitymanager" rev="4.1.7.Final" conf="source,runtime->default"/>
         
    		<dependency org="org.springframework.security" name="spring-security-core" rev="3.1.3.RELEASE" conf="runtime->default"/>
 		<dependency org="org.springframework.security" name="spring-security-config" rev="3.1.3.RELEASE" conf="runtime->default"/>

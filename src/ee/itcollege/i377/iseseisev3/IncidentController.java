@@ -1,5 +1,9 @@
 package ee.itcollege.i377.iseseisev3;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -9,23 +13,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import ee.itcollege.i377.iseseisev3.IncidentSimulatorServiceImpl;
+import ee.itcollege.i377.model.Piirivalvur;
+import ee.itcollege.i377.service.PiirivalvurServiceImpl;
 
-@Controller
+//@Controller
 public class IncidentController {
 
-	@Autowired
-	private IncidentSimulatorServiceImpl incidentSimulatorServiceImpl;
+//	@Autowired
+//	private IncidentSimulatorServiceImpl incidentSimulatorServiceImpl;
+	
+	@Resource
+	private PiirivalvurServiceImpl piirivalvurServiceImpl;
 	
 	@RequestMapping("/login")
 	public String login() {
 		return "login";
 	}
 	
-	@RequestMapping("/listAll")
-	public String allIncidents(Model model){
-		model.addAttribute("incidents", incidentSimulatorServiceImpl.getUnresolvedIncidents());
-		return "listAll";
-	}
+//	@RequestMapping("/listAll")
+//	public String allIncidents(Model model){
+//		model.addAttribute("incidents", incidentSimulatorServiceImpl.getUnresolvedIncidents());
+//		return "listAll";
+//	}
 	@RequestMapping(value="/reportIncident", method=RequestMethod.GET)
 	public String reportIncident(ModelMap model){
 		model.addAttribute("incident", new Incident());
@@ -39,7 +48,9 @@ public class IncidentController {
 	}
 	
 	@RequestMapping("/guard/show")
-	public String showGuard() {
+	public String showGuard(Model model) {
+		List<Piirivalvur> piirivalvurs = piirivalvurServiceImpl.getAllPiirivalvurs();
+		model.addAttribute("allPiirivalvurs", piirivalvurs);
 		return "showGuard";
 	}
 	

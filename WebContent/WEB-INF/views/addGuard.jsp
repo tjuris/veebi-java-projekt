@@ -2,12 +2,12 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <our:Template>
-	<h1>Muuda valvuri andmeid</h1>
+	<h1>Lisa valvur</h1>
 
-	<form:form action="update" method="POST" modelAttribute="piirivalvur">
+
+	<form:form action="add" method="POST" modelAttribute="piirivalvur">
 	
-	
-	<div style="float:left;">
+		<div style="float:left;">
 		<form:label path="sodurikood" >Sõduri kood<br></form:label> <form:input path="sodurikood" /><br/>
 		<form:label path="isikukood" >Isikukood<br></form:label> <form:input path="isikukood" /><br/>
 		<form:label path="eesnimi" >Eesnimi<br></form:label> <form:input path="eesnimi" /><br/>
@@ -19,9 +19,8 @@
 			<form:option value="2" label="N" />
 			</form:select><br>
 		<div class="btn-group">	
-		<input class="btn" type="submit" value="Muuda Valvur">
+		<input class="btn" type="submit" value="Lisa Valvur">
 		<a class="btn" href="show">Katkesta</a>
-		<a class="btn" href="delete?id=${piirivalvur.id}">Kustuta</a>
 		</div>
 	</div>
 	<div style="float:left;">
@@ -30,12 +29,10 @@
 		<form:label path="aadress" >Aadress<br></form:label> <form:input path="aadress" /><br/>
 		<form:label path="kommentaar" >Kommentaar<br></form:label> <form:input path="kommentaar" /><br/>
 	</div>
-		
-		
 	</form:form>
 	
-	<c:if test="${updated == true }">
-		<div>Valvuri andmed muudetud. Vaata <a href="show">kõiki valvureid</a></div>
+	<c:if test="${added == true }">
+		<div>Uus piirivalvur lisatud. Vaata <a href="show">kõiki valvureid</a></div>
 	</c:if>
 	
 </our:Template>
