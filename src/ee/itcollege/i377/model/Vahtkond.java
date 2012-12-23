@@ -13,11 +13,11 @@ import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 
 @NamedQueries({
-    @NamedQuery(name="Piirivalvur.findAll", query="SELECT g FROM Piirivalvur g WHERE g.suletud = NULL"),
-    @NamedQuery(name="Piirivalvur.findById", query="SELECT g FROM Piirivalvur g WHERE g.id = :id")
+    @NamedQuery(name="Vahtkond.findAll", query="SELECT g FROM Piirivalvur g WHERE g.suletud = NULL"),
+    @NamedQuery(name="Vahtkond.findById", query="SELECT g FROM Piirivalvur g WHERE g.id = :id")
 })
 @Entity
-public class Piirivalvur implements Serializable  {
+public class Vahtkond implements Serializable  {
 
 	private static final long serialVersionUID = 1L;
 
@@ -26,29 +26,22 @@ public class Piirivalvur implements Serializable  {
 	private Long id;
 	/*
 	id - bigint
-	aadress - varchar(255)
-	eesnimi - varchar(255)
-	email - varchar(255)
-	isikukood - varchar(255)
 	kommentaar - varchar(255)
-	perekonnanimi - varchar(255)
-	sodurikood - varchar(255)
-	sugu - integer
-	telefon - varchar(255)
+	kood - varchar(255)
+	nimetus - varchar(255)
 	version - integer
+	piiripunkt_id string
+	vaeosa_id string
 	*/
 	
-	private String aadress;
-	private String eesnimi;
-	private String email;
-	private String isikukood;
+	private String kood;
 	private String kommentaar;
-	private String perekonnanimi;
-	private String sodurikood;
-	private String telefon;
-
-	private int sugu;
+	private String nimetus;
+	
 	private int version;
+	
+	private String piiripunkt;
+	private String vaeosa;
 	
 	private String avaja;
 	private String muutja;
@@ -58,11 +51,8 @@ public class Piirivalvur implements Serializable  {
 	private Date muudetud;
 	private Date suletud;
 
-	@OneToMany(mappedBy="piirivalvur")
+	@OneToMany(mappedBy="vahtkond")
 	private Collection<VahtkonnaLiige> vahtkonnaLiiges;
-	
-	@OneToMany(mappedBy="piirivalvur")
-	private Collection<PiirivalvurAuaste> piirivalvurAuastes;
 	
 	public Long getId() {
 		return id;
@@ -72,36 +62,36 @@ public class Piirivalvur implements Serializable  {
 		this.id = id;
 	}
 
-	public String getAadress() {
-		return aadress;
+	public String getKood() {
+		return kood;
 	}
 
-	public void setAadress(String aadress) {
-		this.aadress = aadress;
+	public void setKood(String kood) {
+		this.kood = kood;
 	}
 
-	public String getEesnimi() {
-		return eesnimi;
+	public String getNimetus() {
+		return nimetus;
 	}
 
-	public void setEesnimi(String eesnimi) {
-		this.eesnimi = eesnimi;
+	public void setNimetus(String nimetus) {
+		this.nimetus = nimetus;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getPiiripunkt() {
+		return piiripunkt;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPiiripunkt(String piiripunkt) {
+		this.piiripunkt = piiripunkt;
 	}
 
-	public String getIsikukood() {
-		return isikukood;
+	public String getVaeosa() {
+		return vaeosa;
 	}
 
-	public void setIsikukood(String isikukood) {
-		this.isikukood = isikukood;
+	public void setVaeosa(String vaeosa) {
+		this.vaeosa = vaeosa;
 	}
 
 	public String getKommentaar() {
@@ -110,38 +100,6 @@ public class Piirivalvur implements Serializable  {
 
 	public void setKommentaar(String kommentaar) {
 		this.kommentaar = kommentaar;
-	}
-
-	public String getPerekonnanimi() {
-		return perekonnanimi;
-	}
-
-	public void setPerekonnanimi(String perekonnanimi) {
-		this.perekonnanimi = perekonnanimi;
-	}
-
-	public String getSodurikood() {
-		return sodurikood;
-	}
-
-	public void setSodurikood(String sodurikood) {
-		this.sodurikood = sodurikood;
-	}
-
-	public String getTelefon() {
-		return telefon;
-	}
-
-	public void setTelefon(String telefon) {
-		this.telefon = telefon;
-	}
-
-	public int getSugu() {
-		return sugu;
-	}
-
-	public void setSugu(int sugu) {
-		this.sugu = sugu;
 	}
 
 	public int getVersion() {

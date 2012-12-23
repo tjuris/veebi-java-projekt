@@ -19,12 +19,9 @@ import ee.itcollege.i377.model.Piirivalvur;
 import ee.itcollege.i377.service.PiirivalvurServiceImpl;
 
 @Controller
-public class ValvurController {
-
-//	@Autowired
-//	private IncidentSimulatorServiceImpl incidentSimulatorServiceImpl;
+public class PiirivalvurController {
 	
-	Long originalId;
+	Long originalPiirivalvurId;
 	Piirivalvur originalPiirivalvur;
 		
 	@Resource
@@ -35,22 +32,6 @@ public class ValvurController {
 		return "login";
 	}
 	
-//	@RequestMapping("/listAll")
-//	public String allIncidents(Model model){
-//		model.addAttribute("incidents", incidentSimulatorServiceImpl.getUnresolvedIncidents());
-//		return "listAll";
-//	}
-//	@RequestMapping(value="/reportIncident", method=RequestMethod.GET)
-//	public String reportIncident(ModelMap model){
-//		model.addAttribute("incident", new Incident());
-//		return "reportIncident";
-//	}
-//	
-//	@RequestMapping(value="/reportIncident", method=RequestMethod.POST)
-//	public String reportIncidents(@ModelAttribute Incident incident, Model model){
-//		model.addAttribute("msg", incident.getLocation());
-//		return "showIncident";
-//	}
 	
 	@RequestMapping("/guard/show")
 	public String showGuard(Model model) {
@@ -75,15 +56,15 @@ public class ValvurController {
 	
 	@RequestMapping("/guard/update")
 	public String updateGuard(@RequestParam("id") String updateId, Model model) {
-		originalId = Long.valueOf(updateId).longValue();
-		originalPiirivalvur = piirivalvurServiceImpl.getPiirivalvurById(originalId);
-		model.addAttribute("piirivalvur", piirivalvurServiceImpl.getPiirivalvurById(originalId));
+		originalPiirivalvurId = Long.valueOf(updateId).longValue();
+		originalPiirivalvur = piirivalvurServiceImpl.getPiirivalvurById(originalPiirivalvurId);
+		model.addAttribute("piirivalvur", piirivalvurServiceImpl.getPiirivalvurById(originalPiirivalvurId));
 		return "updateGuard";
 	}
 	
 	@RequestMapping(value="/guard/update", method = RequestMethod.POST)
 	public String updateGuardPost(@ModelAttribute Piirivalvur piirivalvur, Model model) {
-		piirivalvur.setId(originalId);
+		piirivalvur.setId(originalPiirivalvurId);
 		piirivalvur.setAvaja(originalPiirivalvur.getAvaja());
 		piirivalvur.setAvatud(originalPiirivalvur.getAvatud());
 		piirivalvurServiceImpl.updatePiirivalvur(piirivalvur);
@@ -96,25 +77,5 @@ public class ValvurController {
 		piirivalvurServiceImpl.deletePiirivalvurById(Long.valueOf(deleteId).longValue());
 		return "redirect:/guard/show";
 	}
-
-//	@RequestMapping("/guard/delete")
-//	public String deleteGuard() {
-//		return "deleteGuard";
-//	}
-//	
-//	@RequestMapping("/borderStation/show")
-//	public String showBorderStation() {
-//		return "showBorderStation";
-//	}
-//	
-//	@RequestMapping("/borderStation/update")
-//	public String updateBorderStation() {
-//		return "updateBorderStation";
-//	}
-//	
-//	@RequestMapping("/borderStation/delete")
-//	public String deleteBorderStation() {
-//		return "deleteBorderStation";
-//	}
 	
 }
