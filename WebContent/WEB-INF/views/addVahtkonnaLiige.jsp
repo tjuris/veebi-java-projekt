@@ -5,19 +5,18 @@
 	<h1>Lisa vahtkonna liige</h1>
 
 
-	<form:form action="add" method="POST" modelAttribute="vahtkonnaliige">
+	<form:form action="add" method="POST" modelAttribute="vahtkonnaLiige">
 	
 		<div style="float:left;">
 		<form:label path="piirivalvur_id" >Piirivalvur<br></form:label>
 			<form:select path="piirivalvur_id">
-			<form:option value="Jaan Tamm" label="Jaan Tamm" />
-			<form:option value="Meelis Meri" label="Meelis Meri" />
-			<form:option value="Priit Kask" label="Priit Kask" />
+			<form:options items="${allPiirivalvurs}" itemValue="id" itemLabel="eesnimi" />
 			</form:select><br>
 		</div>
 		<div style="float:right;">
-			<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-			<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+			<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+			 -->
+			 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 			<script>$(function() {
 				$("#datepicker" ).datepicker();
@@ -28,14 +27,13 @@
 		<div style="float:left;">
 		<form:label path="vahtkond_id" >Vahtkond<br></form:label>
 			<form:select path="vahtkond_id">
-			<form:option value="Esimene" label="Esimene" />
-			<form:option value="Teine" label="Teine" />
-			<form:option value="Kolmas" label="Kolmas" />
+			<form:options items="${allVahtkonds}" itemValue="id" itemLabel="nimetus" />
 			</form:select><br>
 		
 		</div>
 		<div style="float:right;">
-			<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+			<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+			 -->
 			<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 			<script>$(function() {

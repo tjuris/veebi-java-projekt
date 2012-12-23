@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <our:Template>
-	<h1>Lisa Auaste</h1>
+	<h1>Muuda Auastet</h1>
 
 
 	<form:form action="update" method="POST" modelAttribute="auaste">

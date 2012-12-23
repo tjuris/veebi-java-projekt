@@ -1,7 +1,8 @@
 <%@ include file="init.jsp"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 <our:Template>
-	<h1>Näita Auastmeid</h1>
+	<h1>Auastmed</h1>
 
 Vaatamise kuva..
 	

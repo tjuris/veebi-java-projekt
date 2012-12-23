@@ -2,6 +2,7 @@ package ee.itcollege.i377.controller;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import javax.annotation.Resource;
 
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ee.itcollege.i377.iseseisev3.Incident;
 import ee.itcollege.i377.model.Auaste;
 import ee.itcollege.i377.service.AuasteServiceImpl;
+import org.springframework.context.MessageSource;
 
 @Controller
 public class AuasteController {
@@ -26,7 +28,6 @@ public class AuasteController {
 		
 	@Resource
 	private AuasteServiceImpl auasteServiceImpl;
-	
 	
 	@RequestMapping("/auaste/show")
 	public String showAuaste(Model model) {

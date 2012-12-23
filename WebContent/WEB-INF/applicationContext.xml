@@ -9,5 +9,5 @@
 	<import resource="spring-security.xml" />
 	
 	<context:component-scan base-package="ee.itcollege.i377" />
-
+	
 </beans>

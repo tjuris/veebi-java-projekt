@@ -29,27 +29,27 @@ public class PiirivalvurAuasteController {
 	private PiirivalvurAuasteServiceImpl piirivalvurauasteServiceImpl;
 	
 	
-	@RequestMapping("/piirivalvurauaste/show")
+	@RequestMapping("/piirivalvurAuaste/show")
 	public String showVahtkonnaLiige(Model model) {
 		List<PiirivalvurAuaste> piirivalvurauastes = piirivalvurauasteServiceImpl.getAllPiirivalvurAuastes();
 		model.addAttribute("allPiirivalvurAuastes", piirivalvurauastes);
 		return "showPiirivalvurAuaste";
 	}
 	
-	@RequestMapping("/piirivalvurauaste/add")
+	@RequestMapping("/piirivalvurAuaste/add")
 	public String addVahtkonnaLiige(Model model) {
 		model.addAttribute("vahtkonnaliige", new PiirivalvurAuaste());
 		return "addPiirivalvurAuaste";
 	}
 	
-	@RequestMapping(value="/piirivalvurauaste/add", method = RequestMethod.POST)
+	@RequestMapping(value="/piirivalvurAuaste/add", method = RequestMethod.POST)
 	public String addVahtkonnaLiige(@ModelAttribute PiirivalvurAuaste piirivalvurAuaste, Model model) {
 		piirivalvurauasteServiceImpl.addPiirivalvurAuaste(piirivalvurAuaste);
 		model.addAttribute("added", true);
 		return "addPiirivalvurAuaste";
 	}
 	
-	@RequestMapping("/piirivalvurauaste/update")
+	@RequestMapping("/piirivalvurAuaste/update")
 	public String updateVahtkond(@RequestParam("id") String updateId, Model model) {
 		originalPiirivalvurAuasteId = Long.valueOf(updateId).longValue();
 		originalPiirivalvurAuaste = piirivalvurauasteServiceImpl.getPiirivalvurAuasteById(originalPiirivalvurAuasteId);
@@ -57,7 +57,7 @@ public class PiirivalvurAuasteController {
 		return "updatePiirivalvurAuaste";
 	}
 	
-	@RequestMapping(value="/piirivalvurauaste/update", method = RequestMethod.POST)
+	@RequestMapping(value="/piirivalvurAuaste/update", method = RequestMethod.POST)
 	public String updatePiirivalvurAuaste(@ModelAttribute PiirivalvurAuaste piirivalvurAuaste, Model model) {
 		piirivalvurAuaste.setId(originalPiirivalvurAuasteId);
 		piirivalvurAuaste.setAvaja(originalPiirivalvurAuaste.getAvaja());
@@ -67,7 +67,7 @@ public class PiirivalvurAuasteController {
 		return "updateVahtkonnaLiige";
 	}
 	
-	@RequestMapping("/piirivalvurauaste/delete")
+	@RequestMapping("/piirivalvurAuaste/delete")
 	public String deleteVahtkonnaLiige(@RequestParam("id") String deleteId, Model model) {
 		piirivalvurauasteServiceImpl.deletePiirivalvurAuasteById(Long.valueOf(deleteId).longValue());
 		return "redirect:/vahtkonnaliige/show";
