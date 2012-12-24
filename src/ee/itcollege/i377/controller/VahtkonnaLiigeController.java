@@ -29,14 +29,16 @@ public class VahtkonnaLiigeController {
 	VahtkonnaLiige originalVahtkonnaLiige;
 		
 	@Resource
-	private VahtkonnaLiigeServiceImpl vahtkonnaliigeServiceImpl;
+	private VahtkonnaLiigeServiceImpl vahtkonnaLiigeServiceImpl;
+	@Resource
 	private VahtkondServiceImpl vahtkondServiceImpl;
+	@Resource
 	private PiirivalvurServiceImpl piirivalvurServiceImpl;
 	
 	
 	@RequestMapping("/vahtkonnaLiige/show")
 	public String showVahtkonnaLiige(Model model) {
-		List<VahtkonnaLiige> vahtkonnaliiges = vahtkonnaliigeServiceImpl.getAllVahtkonnaLiiges();
+		List<VahtkonnaLiige> vahtkonnaliiges = vahtkonnaLiigeServiceImpl.getAllVahtkonnaLiiges();
 		model.addAttribute("allVahtkonnaLiiges", vahtkonnaliiges);
 		return "showVahtkonnaLiige";
 	}
@@ -54,32 +56,42 @@ public class VahtkonnaLiigeController {
 	
 	@RequestMapping(value="/vahtkonnaLiige/add", method = RequestMethod.POST)
 	public String addVahtkonnaLiige(@ModelAttribute VahtkonnaLiige vahtkonnaLiige, Model model) {
-		vahtkonnaliigeServiceImpl.addVahtkonnaLiige(vahtkonnaLiige);
+		vahtkonnaLiigeServiceImpl.addVahtkonnaLiige(vahtkonnaLiige);
 		model.addAttribute("added", true);
 		return "addVahtkonnaLiige";
 	}
 	
 	@RequestMapping("/vahtkonnaLiige/update")
-	public String updateVahtkond(@RequestParam("id") String updateId, Model model) {
+	public String updateVahtkonnaLiige(@RequestParam("id") String updateId, Model model) {
+		List<Piirivalvur> piirivalvurs = piirivalvurServiceImpl.getAllPiirivalvurs();
+		model.addAttribute("allPiirivalvurs", piirivalvurs);
+		List<Vahtkond> vahtkonds = vahtkondServiceImpl.getAllVahtkonds();
+		model.addAttribute("allVahtkonds", vahtkonds);
+		
 		originalVahtkonnaLiigeId = Long.valueOf(updateId).longValue();
-		originalVahtkonnaLiige = vahtkonnaliigeServiceImpl.getVahtkonnaLiigeById(originalVahtkonnaLiigeId);
-		model.addAttribute("vahtkonnaliige", vahtkonnaliigeServiceImpl.getVahtkonnaLiigeById(originalVahtkonnaLiigeId));
+		originalVahtkonnaLiige = vahtkonnaLiigeServiceImpl.getVahtkonnaLiigeById(originalVahtkonnaLiigeId);
+		model.addAttribute("vahtkonnaLiige", vahtkonnaLiigeServiceImpl.getVahtkonnaLiigeById(originalVahtkonnaLiigeId));
 		return "updateVahtkonnaLiige";
 	}
 	
 	@RequestMapping(value="/vahtkonnaLiige/update", method = RequestMethod.POST)
 	public String updateVahtkonnaLiige(@ModelAttribute VahtkonnaLiige vahtkonnaLiige, Model model) {
+		List<Piirivalvur> piirivalvurs = piirivalvurServiceImpl.getAllPiirivalvurs();
+		model.addAttribute("allPiirivalvurs", piirivalvurs);
+		List<Vahtkond> vahtkonds = vahtkondServiceImpl.getAllVahtkonds();
+		model.addAttribute("allVahtkonds", vahtkonds);
+		
 		vahtkonnaLiige.setId(originalVahtkonnaLiigeId);
 		vahtkonnaLiige.setAvaja(originalVahtkonnaLiige.getAvaja());
 		vahtkonnaLiige.setAvatud(originalVahtkonnaLiige.getAvatud());
-		vahtkonnaliigeServiceImpl.updateVahtkonnaLiige(vahtkonnaLiige);
+		vahtkonnaLiigeServiceImpl.updateVahtkonnaLiige(vahtkonnaLiige);
 		model.addAttribute("updated", true);
 		return "updateVahtkonnaLiige";
 	}
 	
 	@RequestMapping("/vahtkonnaLiige/delete")
 	public String deleteVahtkonnaLiige(@RequestParam("id") String deleteId, Model model) {
-		vahtkonnaliigeServiceImpl.deleteVahtkonnaLiigeById(Long.valueOf(deleteId).longValue());
+		vahtkonnaLiigeServiceImpl.deleteVahtkonnaLiigeById(Long.valueOf(deleteId).longValue());
 		return "redirect:/vahtkonnaLiige/show";
 	}
 	

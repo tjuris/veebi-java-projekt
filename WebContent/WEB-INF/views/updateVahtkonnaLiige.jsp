@@ -5,55 +5,50 @@
 	<h1>Uuenda vahtkonna liiget</h1>
 
 
-	<form:form action="add" method="POST" modelAttribute="vahtkonnaliige">
+	<form:form action="update" method="POST" modelAttribute="vahtkonnaLiige">
 	
 		<div style="float:left;">
-		<form:label path="piirivalvur_id" >Piirivalvur<br></form:label>
-			<form:select path="piirivalvur_id">
-			<form:option value="Jaan Tamm" label="Jaan Tamm" />
-			<form:option value="Meelis Meri" label="Meelis Meri" />
-			<form:option value="Priit Kask" label="Priit Kask" />
+		<form:label path="piirivalvur.eesnimi" >Piirivalvur<br></form:label>
+			<form:select path="piirivalvur.id">
+			<form:option  value="${vahtkonnaLiige.piirivalvur.id}" label="${vahtkonnaLiige.piirivalvur.eesnimi}" />
+			<form:options items="${allPiirivalvurs}" itemValue="id" itemLabel="eesnimi" />
 			</form:select><br>
-		</div>
-		<div style="float:right;">
-			<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-			<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-			<script>$(function() {
-				$("#datepicker" ).datepicker();
-				});</script>
-			<p>Alates: <input type="text" id="datepicker_from" /> </p>
-		</div>
 		
-		<div style="float:left;">
-		<form:label path="vahtkond_id" >Vahtkond<br></form:label>
-			<form:select path="vahtkond_id">
-			<form:option value="Esimene" label="Esimene" />
-			<form:option value="Teine" label="Teine" />
-			<form:option value="Kolmas" label="Kolmas" />
+		<form:label path="vahtkond.nimetus" >Vahtkond<br></form:label>
+			<form:select path="vahtkond.id">
+			<form:option  value="${vahtkonnaLiige.vahtkond.id}" label="${vahtkonnaLiige.vahtkond.nimetus}" />
+			<form:options items="${allVahtkonds}" itemValue="id" itemLabel="nimetus" />
 			</form:select><br>
 		
 		</div>
 		<div style="float:right;">
-			<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-			<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-			<script>$(function() {
-				$("#datepicker" ).datepicker();
-				});</script>
-			<p>Kuni: <input type="text" id="datepicker_to" /> </p>
+			<script>
+    			$(function() {
+        			$( "#datepicker_from" ).datepicker({ dateFormat: "dd/mm/yy" });
+    			});
+    		
+    		    $(function() {
+    		        $( "#datepicker_to" ).datepicker({ dateFormat: "dd/mm/yy" });
+    		    });    		 
+ 			</script>
+ 			<form:label path="alates" >Alates<br></form:label>
+			<form:input path="alates" id="datepicker_from" />
+			<form:label path="kuni" >Kuni<br></form:label>
+			<form:input path="kuni" id="datepicker_to" />
 		</div>
 	
 		<div style="clear:both;">
 		<form:label path="kommentaar" >Kommentaar<br></form:label> <form:input path="kommentaar" /><br/>
 		</div>
-	<div class="btn-group" >
-		<input class="btn" type="submit" value="Uuenda Vahtkonda">
-		<a class="btn" href="show">Katkesta</a>
-		<a class="btn" href="delete?id=${vahtkonnaLiige.id}">Kustuta</a>
-		
-	</div>
+		<div class="btn-group" >
+			<input class="btn" type="submit" value="Uuenda vahtkonna liiget">
+			<a class="btn" href="show">Katkesta</a>
+			<a class="btn" href="delete?id=${vahtkonnaLiige.id}">Kustuta</a>
+		</div>
 	</form:form>
+		
+		
+	
 		
 	<c:if test="${updated == true }">
 		<div>Vahtkonna liige uuendatud. Vaata <a href="show">kõiki vahtkonna liikmeid</a></div>

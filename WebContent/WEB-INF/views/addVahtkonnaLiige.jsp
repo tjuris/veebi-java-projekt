@@ -8,38 +8,31 @@
 	<form:form action="add" method="POST" modelAttribute="vahtkonnaLiige">
 	
 		<div style="float:left;">
-		<form:label path="piirivalvur_id" >Piirivalvur<br></form:label>
-			<form:select path="piirivalvur_id">
+		<form:label path="piirivalvur" >Piirivalvur<br></form:label>
+			<form:select path="piirivalvur.id">
 			<form:options items="${allPiirivalvurs}" itemValue="id" itemLabel="eesnimi" />
 			</form:select><br>
-		</div>
-		<div style="float:right;">
-			<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-			 -->
-			 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-			<script>$(function() {
-				$("#datepicker" ).datepicker();
-				});</script>
-			<p>Alates: <input type="text" id="datepicker_from" /> </p>
-		</div>
 		
-		<div style="float:left;">
-		<form:label path="vahtkond_id" >Vahtkond<br></form:label>
-			<form:select path="vahtkond_id">
+		<form:label path="vahtkond" >Vahtkond<br></form:label>
+			<form:select path="vahtkond.id">
 			<form:options items="${allVahtkonds}" itemValue="id" itemLabel="nimetus" />
 			</form:select><br>
 		
 		</div>
 		<div style="float:right;">
-			<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-			 -->
-			<script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-			<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
-			<script>$(function() {
-				$("#datepicker" ).datepicker();
-				});</script>
-			<p>Kuni: <input type="text" id="datepicker_to" /> </p>
+			<script>
+    			$(function() {
+        			$( "#datepicker_from" ).datepicker({ dateFormat: "dd/mm/yy" });
+    			});
+    		
+    		    $(function() {
+    		        $( "#datepicker_to" ).datepicker({ dateFormat: "dd/mm/yy" });
+    		    });    		 
+ 			</script>
+ 			<form:label path="alates" >Alates<br></form:label>
+			<form:input path="alates" id="datepicker_from" />
+			<form:label path="kuni" >Kuni<br></form:label>
+			<form:input path="kuni" id="datepicker_to" />
 		</div>
 	
 		<div style="clear:both;">

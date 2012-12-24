@@ -12,6 +12,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 @NamedQueries({
     @NamedQuery(name="PiirivalvurAuaste.findAll", query="SELECT g FROM PiirivalvurAuaste g WHERE g.suletud = NULL"),
     @NamedQuery(name="PiirivalvurAuaste.findById", query="SELECT g FROM PiirivalvurAuaste g WHERE g.id = :id")
@@ -34,7 +36,9 @@ public class PiirivalvurAuaste implements Serializable  {
 	piirivalvur_id - long
 	*/
 	
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date alates;
+	@DateTimeFormat(pattern="dd/MM/yyyy")
 	private Date kuni;
 	private String kommentaar;
 	
@@ -55,6 +59,23 @@ public class PiirivalvurAuaste implements Serializable  {
 	private Date avatud;
 	private Date muudetud;
 	private Date suletud;
+
+	
+	public Auaste getAuaste() {
+		return auaste;
+	}
+
+	public void setAuaste(Auaste auaste) {
+		this.auaste = auaste;
+	}
+
+	public Piirivalvur getPiirivalvur() {
+		return piirivalvur;
+	}
+
+	public void setPiirivalvur(Piirivalvur piirivalvur) {
+		this.piirivalvur = piirivalvur;
+	}
 
 	public Long getId() {
 		return id;
